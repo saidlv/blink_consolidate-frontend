@@ -7,7 +7,7 @@ export const portfolioData = {
     subtitle: [
       "Mobile App Development",
       "Web Development",
-      "SEO & Marketing",
+      "SEO",
       "UI/UX Design",
       "Digital Marketing"
     ],

@@ -163,7 +163,7 @@ const Home = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div ref={socialRef} className="flex justify-start items-center gap-4 pt-4">
+            <div ref={socialRef} className="flex justify-center lg:justify-start items-center gap-4 pt-4">
               {socialIcons.map((social, index) => (
                 <a
                   key={index}

@@ -9,7 +9,7 @@ import Footer from '../components/Footer'
 
 const MainSection = () => {
   return (
-    <div className="main-section">
+    <div className="main-section w-screen overflow-x-hidden">
       <Navbar />
       <main>
         <section id="home">
