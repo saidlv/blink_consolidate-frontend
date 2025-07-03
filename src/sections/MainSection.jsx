@@ -12,7 +12,7 @@ const Footer = React.lazy(() => import('../components/Footer'))
 
 // Loading component
 const SectionLoader = () => (
-  <div className="flex items-center justify-center py-20">
+  <div className="flex items-center justify-center h-screen w-screen">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
   </div>
 )
