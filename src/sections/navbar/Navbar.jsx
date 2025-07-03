@@ -43,7 +43,6 @@ const Navbar = () => {
 
   // GSAP animation for mobile menu
   useEffect(() => {
-    console.log('Mobile menu state changed:', isMobileMenuOpen)
     
     if (mobileMenuRef.current) {
       if (isMobileMenuOpen) {
@@ -60,7 +59,6 @@ const Navbar = () => {
         )
       }
     } else {
-      console.log('mobileMenuRef not available:', !!mobileMenuRef.current)
     }
   }, [isMobileMenuOpen])
 
