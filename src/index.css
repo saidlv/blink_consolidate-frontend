@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Import fonts */
+@font-face {
+  font-family: 'Agustina';
+  src: url('/assets/fonts/agustina.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/montserrat.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Box sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e64a19;
+}
+
+/* Utility classes */
+.agustina-font {
+  font-family: 'Agustina', serif;
+}
+
+.montserrat-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Twinkle animation for decorative elements */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Typed.js cursor styling */
+.typed-cursor {
+  color: var(--primary-color) !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+}
+
+.typed-cursor--blink {
+  animation: typedjsBlink 0.7s infinite !important;
+}
+
+@keyframes typedjsBlink {
+  50% { opacity: 0; }
+}
+
+/* Typed element styling */
+.typed-element {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
