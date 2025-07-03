@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Navbar from './navbar/Navbar'
-import Home from './home/Home'
-import About from './about/About'
-import Services from './services/Services'
-import Portfolio from './portfolio/Portfolio'
-import Contact from './contact/Contact'
-import Footer from '../components/Footer'
 import { useTheme } from '../context/ThemeContext'
+
+// Lazy load components for better performance
+const Home = React.lazy(() => import('./home/Home'))
+const About = React.lazy(() => import('./about/About'))
+const Services = React.lazy(() => import('./services/Services'))
+const Portfolio = React.lazy(() => import('./portfolio/Portfolio'))
+const Contact = React.lazy(() => import('./contact/Contact'))
+const Footer = React.lazy(() => import('../components/Footer'))
+
+// Loading component
+const SectionLoader = () => (
+  <div className="flex items-center justify-center py-20">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
+  </div>
+)
 
 const MainSection = () => {
   const { colors } = useTheme()
@@ -16,22 +25,34 @@ const MainSection = () => {
       <Navbar />
       <main>
         <section id="home">
-          <Home />
+          <Suspense fallback={<SectionLoader />}>
+            <Home />
+          </Suspense>
         </section>
         <section id="about">
-          <About />
+          <Suspense fallback={<SectionLoader />}>
+            <About />
+          </Suspense>
         </section>
         <section id="services">
-          <Services />
+          <Suspense fallback={<SectionLoader />}>
+            <Services />
+          </Suspense>
         </section>
         <section id="portfolio">
-          <Portfolio />
+          <Suspense fallback={<SectionLoader />}>
+            <Portfolio />
+          </Suspense>
         </section>
         <section id="contact">
-          <Contact />
+          <Suspense fallback={<SectionLoader />}>
+            <Contact />
+          </Suspense>
         </section>
       </main>
-      <Footer />
+      <Suspense fallback={<SectionLoader />}>
+        <Footer />
+      </Suspense>
     </div>
   )
 }
