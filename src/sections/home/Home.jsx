@@ -105,10 +105,9 @@ const Home = () => {
   return (
     <div 
       ref={containerRef}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-      style={{ backgroundColor: colors.background }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden py-16 sm:py-20 lg:py-24"
     >
-      <div className="w-full md:w-4/5 mx-auto px-8 md:px-0 py-16 sm:py-20 lg:py-24">
+      <div className="w-full md:w-4/5 mx-auto px-8 md:px-0">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
           {/* Left Content */}

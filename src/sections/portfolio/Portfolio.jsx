@@ -70,7 +70,6 @@ function SamplePrevArrow(props) {
     <section 
       id="portfolio"
       className="pt-10 lg:pt-16"
-      style={{ backgroundColor: colors.background }}
     >
       <div className="w-full mx-auto px-3 lg:px-10 mb-8 lg:mb-12">
           

@@ -10,7 +10,6 @@ const About = () => {
     <section 
       id="about"
       className="w-full"
-      style={{ backgroundColor: colors.background }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-0">
           

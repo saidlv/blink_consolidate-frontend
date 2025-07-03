@@ -6,10 +6,13 @@ import Services from './services/Services'
 import Portfolio from './portfolio/Portfolio'
 import Contact from './contact/Contact'
 import Footer from '../components/Footer'
+import { useTheme } from '../context/ThemeContext'
 
 const MainSection = () => {
+  const { colors } = useTheme()
+  
   return (
-    <div className="main-section w-screen overflow-x-hidden">
+    <div className="main-section overflow-x-hidden" style={{ backgroundColor: colors.background }}>
       <Navbar />
       <main>
         <section id="home">

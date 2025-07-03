@@ -136,7 +136,6 @@ const Contact = () => {
     <section 
       id="contact"
       className="min-h-screen py-16 md:py-20 lg:py-24"
-      style={{ backgroundColor: colors.background }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">

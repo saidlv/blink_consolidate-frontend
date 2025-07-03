@@ -53,6 +53,26 @@ body {
   background: #e64a19;
 }
 
+/* Hide scrollbar on mobile devices */
+@media (max-width: 768px) {
+  /* For webkit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* Ensure scrolling still works */
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 /* Utility classes */
 .agustina-font {
   font-family: 'Agustina', serif;
